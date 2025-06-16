@@ -4,12 +4,26 @@ A basic Laravel 11 project running on PHP 8.3. It provides a cyberpunk themed da
 
 ## Installation
 
-1. Clone the repository.
-2. Run `composer install`.
-3. Copy `.env.example` to `.env` and configure your database credentials.
-4. Run `php artisan key:generate`.
-5. Run migrations with `php artisan migrate`.
-6. Serve the application using `php artisan serve`.
+Clone the project and run the setup in one command:
+
+```bash
+git clone https://github.com/youruser/PHP-Laravel-Basic.git \
+  && cd PHP-Laravel-Basic \
+  && composer install \
+  && cp .env.example .env \
+  && php artisan key:generate \
+  && php artisan migrate \
+  && php artisan serve
+```
+
+Before running migrations, edit `.env` to match your local database. Update the
+following fields (example values shown for a MySQL setup):
+
+```
+DB_DATABASE=cyberpunk
+DB_USERNAME=root
+DB_PASSWORD=secret
+```
 
 ## Features
 
