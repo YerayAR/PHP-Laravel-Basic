@@ -48,3 +48,17 @@ Released under the MIT license. Feel free to build upon this template for your o
 ## Screenshots
 
 _Add screenshots here_
+
+## Production Deployment
+
+For optimized production builds, copy `.env.example` to `.env` and review the
+database settings. Ensure `APP_ENV=production` and `APP_DEBUG=false`.
+Then run the provided deploy script:
+
+```bash
+./scripts/deploy.sh
+```
+
+This installs production dependencies and caches configuration, routes and views
+for best performance.
+
