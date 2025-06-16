@@ -1,0 +1,16 @@
+body {
+    font-family: 'Orbitron', sans-serif;
+}
+.text-magenta { color: #ff00ff; }
+.bg-magenta { background-color: #ff00ff; }
+.text-cyan { color: #00ffff; }
+.bg-cyan { background-color: #00ffff; }
+.text-violet { color: #a64aff; }
+.bg-violet { background-color: #a64aff; }
+.bg-black { background-color: #0a0a0a; }
+
+/* simple glow effect */
+a:hover, button:hover {
+    filter: drop-shadow(0 0 6px #00ffff);
+    transition: filter 0.2s;
+}
