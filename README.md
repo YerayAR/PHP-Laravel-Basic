@@ -51,14 +51,17 @@ _Add screenshots here_
 
 ## Production Deployment
 
-For optimized production builds, copy `.env.example` to `.env` and review the
-database settings. Ensure `APP_ENV=production` and `APP_DEBUG=false`.
-Then run the provided deploy script:
+1. Copy `.env.example` to `.env` and update the database credentials.
+2. Verify that `APP_ENV=production` and `APP_DEBUG=false` are set.
+3. Run the deploy script to install optimized dependencies and generate caches:
 
 ```bash
 ./scripts/deploy.sh
 ```
 
-This installs production dependencies and caches configuration, routes and views
-for best performance.
+The script executes `composer install --no-dev --optimize-autoloader`, caches
+configuration, routes and views, and sets write permissions for
+`storage/` and `bootstrap/cache/`.
+
+Ensure your `.env` file is not exposed publicly through the web server.
 
