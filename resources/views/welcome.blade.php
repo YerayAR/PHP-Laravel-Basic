@@ -1,3 +1,4 @@
+{{-- Landing page view --}}
 @extends('layouts.app')
 
 @section('content')

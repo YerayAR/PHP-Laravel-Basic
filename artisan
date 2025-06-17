@@ -1,17 +1,34 @@
 #!/usr/bin/env php
 <?php
 
+/**
+ * Laravel command line entry point.
+ *
+ * This script is executed whenever the `php artisan` command is run. It
+ * bootstraps the framework, resolves the console kernel and passes the
+ * CLI input so that Artisan commands can be executed.
+ */
+
+// Autoload Composer dependencies and the application classes.
 require __DIR__.'/vendor/autoload.php';
 
+// Bootstrap the Laravel application and retrieve an instance of the
+// service container.
 $app = require_once __DIR__.'/bootstrap/app.php';
 
+// Resolve the console kernel which handles Artisan commands.
 $kernel = $app->make(Illuminate\Contracts\Console\Kernel::class);
 
+// Handle the given input and output streams. This will execute the command
+// provided by the user on the command line.
 $status = $kernel->handle(
     $input = new Symfony\Component\Console\Input\ArgvInput(),
     new Symfony\Component\Console\Output\ConsoleOutput()
 );
 
+// Perform any termination logic required by the kernel such as flushing
+// buffers or finishing queued jobs.
 $kernel->terminate($input, $status);
 
+// Exit with the status code returned by the kernel.
 exit($status);

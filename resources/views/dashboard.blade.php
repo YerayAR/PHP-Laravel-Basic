@@ -1,3 +1,4 @@
+{{-- User dashboard view --}}
 @extends('layouts.app')
 
 @section('content')
