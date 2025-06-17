@@ -1,3 +1,4 @@
+{{-- Form to create a new node --}}
 @extends('layouts.app')
 
 @section('content')

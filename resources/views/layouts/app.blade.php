@@ -1,3 +1,7 @@
+{{--
+    Base application layout used by all views.
+    Provides the navigation bar and loads the core CSS stylesheet.
+--}}
 <!DOCTYPE html>
 <html lang="en">
 <head>

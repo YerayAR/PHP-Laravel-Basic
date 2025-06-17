@@ -1,3 +1,4 @@
+{{-- Form to edit an existing node --}}
 @extends('layouts.app')
 
 @section('content')

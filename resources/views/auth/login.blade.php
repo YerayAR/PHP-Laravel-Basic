@@ -1,3 +1,4 @@
+{{-- Login page view --}}
 @extends('layouts.app')
 
 @section('content')

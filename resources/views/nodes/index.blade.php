@@ -1,3 +1,4 @@
+{{-- List view for all nodes --}}
 @extends('layouts.app')
 
 @section('content')
