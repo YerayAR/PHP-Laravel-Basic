@@ -25,11 +25,11 @@ The application follows the traditional MVC structure.
 
 ```mermaid
 graph TD
-    A[Browser] --> B(routes/web.php)
+    A[Browser] --> B[routes/web.php]
     B --> C[Controllers]
     C --> D[Models]
     D --> E[(Database)]
-    C --> F[Views (Blade)]
+    C --> F[Views Blade]
     F --> A
 ```
 
@@ -145,7 +145,7 @@ Below is a simple diagram illustrating the Node CRUD flow.
 
 ```mermaid
 flowchart LR
-    A[User] -->|adds| B(Create Node Form)
+    A[User] -->|adds| B[Create Node Form]
     B --> C[POST /nodes]
     C --> D[(Database)]
     D --> E[List Nodes]
