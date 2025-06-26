@@ -216,10 +216,6 @@ git push origin feature/cyberpunk-enhancement
 - **Include animations** for interactive elements
 - **Test on multiple screen sizes**
 
-## 📜 License & Credits
-
-### 🛡️ MIT License
-This cyberpunk network platform is released under the **MIT License**. Feel free to hack, modify, and deploy it in your own digital matrix.
 
 ### 🎨 Design Credits
 - **Cyberpunk aesthetic** inspired by futuristic sci-fi interfaces
