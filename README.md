@@ -224,7 +224,7 @@ git push origin feature/cyberpunk-enhancement
 - **Typography choices** selected for readability and style
 
 ### 🚀 Built With Passion
-Crafted with ⚡ by developers who believe the future should look as cool as it functions.
+Crafted with ⚡ by Yeray AR.
 
 ---
 
