@@ -138,37 +138,6 @@ php artisan serve
 
 6. **Access the system at** `http://127.0.0.1:8000`
 
-### Docker Compose
-A simple `docker-compose.yml` could be used to run PHP, MySQL and the application.
-
-```yaml
-version: '3.8'
-services:
-  app:
-    image: php:8.3-cli
-    working_dir: /var/www
-    volumes:
-      - ./:/var/www
-    command: php artisan serve --host=0.0.0.0 --port=8000
-    ports:
-      - "8000:8000"
-    depends_on:
-      - db
-  db:
-    image: mysql:8
-    environment:
-      MYSQL_DATABASE: cyberpunk
-      MYSQL_ROOT_PASSWORD: secret
-    ports:
-      - "3306:3306"
-```
-
-Run the stack with:
-
-```bash
-docker-compose up -d
-```
-
 ## ⚡ Running the Cyberpunk Platform
 
 Useful commands for development and deployment:
@@ -247,10 +216,6 @@ git push origin feature/cyberpunk-enhancement
 - **Include animations** for interactive elements
 - **Test on multiple screen sizes**
 
-## 📜 License & Credits
-
-### 🛡️ MIT License
-This cyberpunk network platform is released under the **MIT License**. Feel free to hack, modify, and deploy it in your own digital matrix.
 
 ### 🎨 Design Credits
 - **Cyberpunk aesthetic** inspired by futuristic sci-fi interfaces
@@ -259,7 +224,7 @@ This cyberpunk network platform is released under the **MIT License**. Feel free
 - **Typography choices** selected for readability and style
 
 ### 🚀 Built With Passion
-Crafted with ⚡ by developers who believe the future should look as cool as it functions.
+Crafted with ⚡ by Yeray AR.
 
 ---
 
