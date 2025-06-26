@@ -3,6 +3,7 @@
  */
 body {
     font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(90deg, #0a0a0a, #1b1b1b);
 }
 .text-magenta { color: #ff00ff; }
 .bg-magenta { background-color: #ff00ff; }
@@ -12,8 +13,152 @@ body {
 .bg-violet { background-color: #a64aff; }
 .bg-black { background-color: #0a0a0a; }
 
-/* Simple glow effect for interactive elements */
+/* Enhanced glow effect for a more futuristic feel */
 a:hover, button:hover {
-    filter: drop-shadow(0 0 6px #00ffff);
-    transition: filter 0.2s;
+    filter: drop-shadow(0 0 10px #00ffff), 0 0 5px #ff00ff;
+    transition: filter 0.3s ease-in-out;
+}
+
+/* Adding borders and shadows for element depth */
+.card {
+    background-color: #1c1c1e;
+    border: 1px solid #ff00ff;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Cyberpunk grid effect */
+.cyberpunk-grid {
+    background-image: 
+        linear-gradient(rgba(255, 0, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 0, 255, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    animation: grid-move 20s linear infinite;
+}
+
+@keyframes grid-move {
+    0% { background-position: 0 0; }
+    100% { background-position: 20px 20px; }
+}
+
+/* Glitch effect for headers */
+.glitch {
+    position: relative;
+    animation: glitch 2s infinite;
+}
+
+@keyframes glitch {
+    0%, 90%, 100% {
+        transform: translateX(0);
+    }
+    10% {
+        transform: translateX(-2px);
+    }
+    20% {
+        transform: translateX(2px);
+    }
+}
+
+/* Pulsing elements */
+.pulse-slow {
+    animation: pulse-slow 3s ease-in-out infinite;
+}
+
+@keyframes pulse-slow {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* Neon border effect */
+.neon-border {
+    border: 2px solid #00ffff;
+    box-shadow: 
+        0 0 5px #00ffff,
+        inset 0 0 5px #00ffff,
+        0 0 10px #ff00ff,
+        inset 0 0 10px #ff00ff;
+    animation: neon-flicker 1.5s infinite alternate;
+}
+
+@keyframes neon-flicker {
+    0%, 50%, 100% {
+        box-shadow: 
+            0 0 5px #00ffff,
+            inset 0 0 5px #00ffff,
+            0 0 10px #ff00ff,
+            inset 0 0 10px #ff00ff;
+    }
+    25%, 75% {
+        box-shadow: 
+            0 0 2px #00ffff,
+            inset 0 0 2px #00ffff,
+            0 0 5px #ff00ff,
+            inset 0 0 5px #ff00ff;
+    }
+}
+
+/* Enhanced button styling */
+button, .btn {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+button:hover, .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+}
+
+/* Floating particles effect */
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: #00ffff;
+    animation: float 10s infinite linear;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
 }
